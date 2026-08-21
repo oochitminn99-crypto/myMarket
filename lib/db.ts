@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+/*import mongoose from "mongoose";
 
 const MONGODB_URI = process.env.MONGODB_URI;
 
@@ -48,9 +48,9 @@ async function connectToDatabase() {
     return cached.conn;
 }
 
-export default connectToDatabase;
+export default connectToDatabase;*/
 
-/*import mongoose from "mongoose";
+import mongoose from "mongoose";
 const MONGODB_URI = process.env.MONGODB_URI!;
 
 if (!MONGODB_URI) {
@@ -82,4 +82,3 @@ export async function connectToDatabase() {
     cached.conn = await cached.promise;
     return cached.conn;
 }
-   */ 

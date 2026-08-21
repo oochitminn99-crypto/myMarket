@@ -1,4 +1,4 @@
-import connectToDatabase from "./db";
+import {connectToDatabase} from "./db";
 import User from "../models/User";
 import bcrypt from "bcryptjs";
 

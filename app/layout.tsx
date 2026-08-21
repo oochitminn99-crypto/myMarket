@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import SessionWrapper from "./SessionWrapper";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -11,7 +12,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="en"
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <SessionWrapper>
+          {children}
+        </SessionWrapper>
+      </body>
     </html>
   );
 }

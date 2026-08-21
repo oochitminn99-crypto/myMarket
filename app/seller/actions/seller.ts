@@ -39,7 +39,7 @@ export async function sellerMsg(prevState: FormState, formData: FormData)
     }
 
     try {
-        const res = await axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}/api/seller-msg`, {
+        const res = await axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}/api/seller/seller-msg`, {
             email,
             sellerName,
             message
@@ -51,8 +51,7 @@ export async function sellerMsg(prevState: FormState, formData: FormData)
     }else {
         return { errors: {}, error: res.data.error || "Something went wrong" };
          };
-    }
-        catch (err: unknown) {
+    }catch (err: unknown) {
         console.log("Server Action Error:", err);
         return { errors: {}, error : "Server error. try later."}
     }

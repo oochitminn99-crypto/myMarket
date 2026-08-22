@@ -14,8 +14,8 @@ export default async function AdminLayout({
     const session = await getServerSession(authOptions);
     const username = session?.user?.username;
     const menuItems = [
-        {name: "Sellers Request", icon: "MessageSquarePlus", path: "/admin/dashboard"},
-        {name: "Sellers Account", icon: "UsersRound", path: "/admin/dashboard/sellers"}
+        { name: "Sellers Request", icon: "MessageSquarePlus", path: "/admin/dashboard" },
+        { name: "Sellers Account", icon: "UsersRound", path: "/admin/dashboard/sellers" }
     ]
     return (
         <div className="h-screen flex flex-col overflow-hidden bg-gray-50">
@@ -40,20 +40,20 @@ export default async function AdminLayout({
                         height={30}
                         className="object-contain"
                     />
-                    <h1 className="text-base font-semibold text-green-600 bg-gray-200 px-1 rounded-md">
+                    <h1 className="text-base font-semibold text-green-600 bg-gray-200 px-1 py-0.5 rounded-md">
                         {username}
                     </h1>
-                    <Logout path={"/admin"}/>
+                    <Logout path={"/admin"} />
                 </div>
             </header>
             <div className="flex flex-1 overflow-hidden">
                 <div className="h-full flex-none">
-                    <Leftbar menuItems={menuItems}/>
+                    <Leftbar menuItems={menuItems} />
                 </div>
+                <main className="flex-1 h-full overflow-y-auto p-6 bg-gray-50">
+                    {children}
+                </main>
             </div>
-            <main className="flex-1 h-full overflow-y-auto p-6 bg-gray-50">
-                {children}
-            </main>
         </div>
     )
 }

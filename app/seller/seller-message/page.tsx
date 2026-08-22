@@ -10,10 +10,10 @@ export default async function AuthPage() {
 
                 <Link href="/" className="flex items-center hover:opacity-80 transition">
                     <Image
-                        src="/images/logo1.png"
+                        src="/images/logo.png"
                         alt="Logo"
-                        width={30}
-                        height={30}
+                        width={50}
+                        height={50}
                         className="object-contain"
                     />
                 </Link>

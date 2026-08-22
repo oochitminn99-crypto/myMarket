@@ -1,5 +1,5 @@
-export default function MessagePage() {
+export default function SellerRequest() {
     return <h1>
-        Message Page
+        Seller Request Page
     </h1>
 }

@@ -6,6 +6,7 @@ import { useState } from "react";
 
 const Logout = ({ path }: { path: string }) => {
     const [loading, setLoading] = useState(false);
+    
     const handleLogout = () => {
         setLoading(true);
         try {

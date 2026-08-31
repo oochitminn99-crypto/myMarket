@@ -37,9 +37,9 @@ export async function sellerMsg(prevState: FormState, formData: FormData)
     if (Object.keys(errors).length > 0) {
         return { errors };
     }
-
+    //add /accept
     try {
-        const res = await axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}/api/seller/seller-msg`, {
+        const res = await axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}/api/seller/seller-msg/accept`, {
             email,
             sellerName,
             message

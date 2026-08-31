@@ -8,7 +8,7 @@ import { useParams, useRouter, useSearchParams } from "next/navigation"
 import { useActionState } from "react";
 
 export default function AcceptRequest() {
-    const params = useParams()
+    const params = useParams();
     const searchParams = useSearchParams();
     const router = useRouter();
 
@@ -19,8 +19,8 @@ export default function AcceptRequest() {
     const acceptWithId = AcceptMessage.bind(null, params.id as string);
     const [state, formAction, isPending] = useActionState(
         acceptWithId,
-        initialState
-    )
+        initialState,
+    );
 
     return (
         <Form action={formAction}>

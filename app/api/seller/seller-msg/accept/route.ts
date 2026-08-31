@@ -56,7 +56,7 @@ export async function POST(req: Request) {
         });
         const setPasswordUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/seller/set-password?id=${sellerId}`;
         const mailOptions = {
-            from: `"Shoply Support" <${process.env.EMAIL_USER}>`,
+            from: `"https://my-market-25kc.vercel.app Support" <${process.env.EMAIL_USER}>`,
             to: sellerEmail,
             subject: "Set Your Seller Account Password",
             html: `<div style="font-family: Arial, sans-serif; padding: 24px; background-color: #f8f9fb; border-radius: 10px;">

@@ -58,8 +58,8 @@ export async function POST(req: Request) {
     const setPasswordUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/seller/set-password?id=${sellerId}`;
 
     const mailOptions = {
-      // `"Support" <${process.env.EMAIL_USER}>`
-      from: process.env.EMAIL_USER,
+      //
+      from:  `"my-market-25kc Support" <${process.env.EMAIL_USER}>`,
       to: sellerEmail,
       subject: 'Set Your Seller Account Password',
       html: `

@@ -15,7 +15,7 @@ export default async function AdminLayout({
     const username = session?.user?.username;
     const menuItems = [
         { name: "Sellers Request", icon: "MessageSquarePlus", path: "/admin/dashboard" },
-        { name: "Sellers Account", icon: "UsersRound", path: "/admin/dashboard/sellers" }
+        { name: "Sellers Account", icon: "UsersRound", path: "/admin/dashboard/sellers-account" }
     ]
     return (
         <div className="h-screen flex flex-col overflow-hidden bg-gray-50">

@@ -41,7 +41,7 @@ export default async function SellerRequest() {
                             messages.map((msg) => (
 
                                 <tr key={msg._id} className="hover:bg-gray-50">
-                                    <td className="p-3 border">{msg.email}</td>
+                                    <td className="p-3 border text-fuchsia-800 font-bold">{msg.email}</td>
                                     <td className="p-3 border">{msg.sellerName}</td>
                                     <td className="p-3 border">{msg.message}</td>
                                     <td className="p-3 border text-center">

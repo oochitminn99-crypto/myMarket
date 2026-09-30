@@ -28,3 +28,21 @@ export  async function AcceptMessage(id: string, prevState: FormState, formData:
         return { errors: {}, error: "Server error, Try Later." };
     }
 }
+
+export async function DeleteSeller(id: string, prevState: FormState, formData: FormData): Promise<FormState> {
+    try {
+        const res = await axios.delete(
+            `${process.env.NEXT_PUBLIC_BASE_URL}/api/seller/delete-seller`,
+            {data: {id},
+            validateStatus: () => true},
+        );
+        if (res.status === 200) {
+            return { errors: {}, success: res.data.message };
+        } else {
+            return { errors: {}, error: res.data.error || "Something went wrong" };
+        }
+    } catch(error) {
+        console.error("Server Action Error:", error);
+        return { errors: {}, error: "Server error, Try Later." };
+    }
+}

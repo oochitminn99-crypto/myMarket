@@ -27,10 +27,12 @@ export async function DELETE(req: NextRequest) {
                 { status: 404});
         }
         await SellerMsg.findByIdAndDelete(id);
+        alert("Delete Seller Msg");
             return NextResponse.json(
                 {error: "Seller message Deleted Successfully"}, 
                 { status: 200},
             );
+            
     } catch (error) {
         return NextResponse.json(
                 {error: "Something went wrong while deleting Seller Account"}, 
